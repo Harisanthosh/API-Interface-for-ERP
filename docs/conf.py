@@ -24,6 +24,8 @@ author = 'Hari Santhosh'
 # The full version, including alpha/beta/rc tags
 release = 'Stable'
 
+# Only for build in readthedocs.org
+master_doc = 'index'
 
 # -- General configuration ---------------------------------------------------
 

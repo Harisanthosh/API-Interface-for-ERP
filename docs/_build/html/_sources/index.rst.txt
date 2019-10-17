@@ -9,6 +9,8 @@ Welcome to TransfactERP API Docs's documentation!
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
+   
+   modules
 
 Get Running!
 ============

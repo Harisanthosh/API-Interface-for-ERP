@@ -34,6 +34,11 @@ UPLOAD_FOLDER = 'D:/HariMasters/SIMPROD/uploads'
 async def upload_result(
     fileb: UploadFile = File(...)
 ):
+    """
+     Upload a file with the extension of .tab which will be converted to a .csv file
+     and used for insertion to the Oracle Database of the Transfact System
+     [Note]: A new table will be created with the filename of the uploaded .tab file
+    """
     # tb.convert_file(file,fileb.filename)
     tb.convert_file(fileb.file, fileb.filename)
     insr.query(fileb.filename)
@@ -43,6 +48,9 @@ async def upload_result(
     }
 @app.delete("/files/{table}")
 def remove_table(table: str):
+    """
+    Delete the table which was created in the ERP system with the name of the .tab file
+    """
     q = "DROP TABLE " + table + " PURGE";
     with SSHTunnelForwarder(
             (host, 24226),
@@ -73,6 +81,9 @@ def remove_table(table: str):
 
 @app.get("/")
 def read_root():
+    """
+    Random test function xD
+    """
     return {"Hello": "World"}
 
 # @app.get("/items/{item_id}")
@@ -81,6 +92,9 @@ def read_root():
 
 @app.get("/erp/latest/{table}")
 def get_latest_simulation_result(table: str):
+    """
+    Search for the latest simulation record in the table and returns it to the User
+    """
     q = "select * from "+ table +" where Timestamp = (select max(Timestamp) from "+ table +" )";
     with SSHTunnelForwarder(
             (host, 24226),
@@ -115,6 +129,10 @@ def get_latest_simulation_result(table: str):
 
 @app.get("/erp/{table}")
 def query(table: str,filter_time: str = None):
+    """
+    Queries and returns the value of the records of the simulation from the database.
+    [Note]: If timestamp is not included it fetches all the records from the table
+    """
     if filter_time == None:
         q = "select * from "+ table +" ";
     else:

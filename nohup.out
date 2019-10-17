@@ -1,0 +1,358 @@
+INFO: Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO: Started reloader process [2376]
+email-validator not installed, email fields will be treated as str.
+To install, run: pip install email-validator
+INFO: Started server process [2378]
+INFO: Waiting for application startup.
+INFO: ('90.153.66.61', 54652) - "GET /robots.txt HTTP/1.1" 404
+INFO: ('90.153.66.61', 54651) - "GET /docs HTTP/1.1" 200
+INFO: ('90.153.66.61', 54651) - "GET /openapi.json HTTP/1.1" 200
+INFO: ('90.153.66.61', 54654) - "GET /docs HTTP/1.1" 200
+INFO: ('90.153.66.61', 54654) - "GET /openapi.json HTTP/1.1" 200
+INFO: Connected (version 2.0, client OpenSSH_5.5p1)
+INFO: Authentication (publickey) successful!
+INFO: ('90.153.66.61', 54658) - "GET /erp/latest/sir_output HTTP/1.1" 200
+INFO: ('90.153.66.61', 49872) - "GET /openapi.json HTTP/1.1" 200
+INFO: ('80.82.77.33', 50434) - "GET / HTTP/1.1" 200
+INFO: ('80.82.77.33', 51476) - "GET /favicon.ico HTTP/1.1" 404
+WARNING: Invalid HTTP request received.
+WARNING: Invalid HTTP request received.
+WARNING: Invalid HTTP request received.
+INFO: ('198.108.67.48', 62928) - "GET / HTTP/1.1" 200
+WARNING: Invalid HTTP request received.
+WARNING: Invalid HTTP request received.
+INFO: ('192.210.144.186', 51934) - "GET / HTTP/1.1" 200
+WARNING: Invalid HTTP request received.
+INFO: ('89.248.174.3', 60894) - "GET / HTTP/1.1" 200
+INFO: ('187.63.213.41', 52263) - "GET / HTTP/1.0" 200
+ERROR: Exception in callback UVTransport._call_connection_made
+handle: <Handle UVTransport._call_connection_made>
+Traceback (most recent call last):
+  File "uvloop/cbhandles.pyx", line 71, in uvloop.loop.Handle._run
+  File "uvloop/handles/tcp.pyx", line 152, in uvloop.loop.TCPTransport._call_connection_made
+  File "uvloop/handles/basetransport.pyx", line 131, in uvloop.loop.UVBaseTransport._call_connection_made
+  File "uvloop/handles/basetransport.pyx", line 128, in uvloop.loop.UVBaseTransport._call_connection_made
+  File "/home/harisan07/.local/lib/python3.6/site-packages/uvicorn/protocols/http/httptools_impl.py", line 125, in connection_made
+    self.client = get_remote_addr(transport)
+  File "/home/harisan07/.local/lib/python3.6/site-packages/uvicorn/protocols/utils.py", line 7, in get_remote_addr
+    info = socket_info.getpeername()
+  File "uvloop/pseudosock.pyx", line 104, in uvloop.loop.PseudoSocket.getpeername
+OSError: [Errno 107] Transport endpoint is not connected
+INFO: ('77.247.110.223', 51684) - "HEAD /robots.txt HTTP/1.0" 404
+INFO: ('139.162.79.87', 38092) - "GET / HTTP/1.1" 200
+WARNING: Invalid HTTP request received.
+INFO: ('117.50.6.201', 49550) - "GET / HTTP/1.0" 200
+INFO: ('106.75.118.223', 43186) - "GET / HTTP/1.1" 200
+INFO: ('172.104.92.166', 42364) - "GET / HTTP/1.1" 200
+INFO: ('23.225.121.227', 57137) - "GET / HTTP/1.1" 200
+INFO: ('23.225.121.227', 57274) - "GET / HTTP/1.1" 200
+WARNING: Invalid HTTP request received.
+INFO: ('113.173.109.112', 54668) - "GET / HTTP/1.0" 200
+WARNING: Invalid HTTP request received.
+INFO: ('175.182.249.164', 41553) - "GET / HTTP/1.0" 200
+INFO: ('177.155.252.124', 60268) - "GET / HTTP/1.0" 200
+WARNING: Invalid HTTP request received.
+INFO: ('201.127.15.190', 57250) - "GET / HTTP/1.0" 200
+WARNING: Invalid HTTP request received.
+INFO: ('1.215.114.197', 35774) - "GET / HTTP/1.0" 200
+INFO: ('86.122.109.217', 48127) - "GET / HTTP/1.0" 200
+INFO: ('187.213.168.149', 43303) - "GET / HTTP/1.0" 200
+INFO: ('186.120.55.216', 60470) - "GET / HTTP/1.0" 200
+INFO: ('186.120.55.216', 60475) - "GET / HTTP/1.0" 200
+INFO: ('221.157.79.192', 42730) - "GET / HTTP/1.0" 200
+WARNING: Invalid HTTP request received.
+WARNING: Invalid HTTP request received.
+INFO: ('121.158.164.43', 43508) - "GET / HTTP/1.0" 200
+INFO: ('121.158.164.43', 43643) - "GET / HTTP/1.0" 200
+INFO: ('121.158.164.43', 43845) - "GET / HTTP/1.0" 200
+INFO: ('119.195.200.83', 49324) - "GET / HTTP/1.0" 200
+INFO: ('119.195.200.83', 49322) - "GET / HTTP/1.0" 200
+INFO: ('185.97.210.139', 53384) - "GET / HTTP/1.0" 200
+WARNING: Invalid HTTP request received.
+INFO: ('198.108.67.48', 6960) - "GET / HTTP/1.1" 200
+INFO: Shutting down
+INFO: Stopping reloader process [2376]
+INFO: Waiting for application shutdown.
+INFO: Finished server process [2378]
+select * from sir_output where Timestamp = (select max(Timestamp) from sir_output )
+INFO: Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO: Started reloader process [1703]
+email-validator not installed, email fields will be treated as str.
+To install, run: pip install email-validator
+INFO: Stopping reloader process [1703]
+Process SpawnProcess-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/harisan07/.local/lib/python3.6/site-packages/uvicorn/supervisors/statreload.py", line 28, in handle_fds
+    target(**kwargs)
+  File "/home/harisan07/.local/lib/python3.6/site-packages/uvicorn/main.py", line 307, in run
+    loop.run_until_complete(self.serve(sockets=sockets))
+  File "uvloop/loop.pyx", line 1445, in uvloop.loop.Loop.run_until_complete
+  File "uvloop/loop.pyx", line 1438, in uvloop.loop.Loop.run_until_complete
+  File "uvloop/loop.pyx", line 1347, in uvloop.loop.Loop.run_forever
+  File "uvloop/loop.pyx", line 487, in uvloop.loop.Loop._run
+  File "uvloop/loop.pyx", line 404, in uvloop.loop.Loop._on_idle
+  File "uvloop/cbhandles.pyx", line 66, in uvloop.loop.Handle._run
+  File "/home/harisan07/.local/lib/python3.6/site-packages/uvicorn/main.py", line 314, in serve
+    config.load()
+  File "/home/harisan07/.local/lib/python3.6/site-packages/uvicorn/config.py", line 186, in load
+    self.loaded_app = import_from_string(self.app)
+  File "/home/harisan07/.local/lib/python3.6/site-packages/uvicorn/importer.py", line 20, in import_from_string
+    module = importlib.import_module(module_str)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "./api_fetcher.py", line 6, in <module>
+    from sshtunnel import SSHTunnelForwarder, open_tunnel
+  File "/home/harisan07/.local/lib/python3.6/site-packages/sshtunnel.py", line 25, in <module>
+    import paramiko
+  File "/home/harisan07/.local/lib/python3.6/site-packages/paramiko/__init__.py", line 22, in <module>
+    from paramiko.transport import SecurityOptions, Transport
+  File "/home/harisan07/.local/lib/python3.6/site-packages/paramiko/transport.py", line 90, in <module>
+    from paramiko.ed25519key import Ed25519Key
+  File "/home/harisan07/.local/lib/python3.6/site-packages/paramiko/ed25519key.py", line 22, in <module>
+    import nacl.signing
+  File "/home/harisan07/.local/lib/python3.6/site-packages/nacl/signing.py", line 17, in <module>
+    import nacl.bindings
+  File "/home/harisan07/.local/lib/python3.6/site-packages/nacl/bindings/__init__.py", line 377, in <module>
+    sodium_init()
+  File "/home/harisan07/.local/lib/python3.6/site-packages/nacl/bindings/sodium_core.py", line 32, in sodium_init
+    ffi.init_once(_sodium_init, "libsodium")
+  File "/home/harisan07/.local/lib/python3.6/site-packages/nacl/bindings/sodium_core.py", line 22, in _sodium_init
+    ensure(lib.sodium_init() != -1,
+KeyboardInterrupt
+INFO: Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO: Started reloader process [1876]
+email-validator not installed, email fields will be treated as str.
+To install, run: pip install email-validator
+INFO: Started server process [1878]
+INFO: Waiting for application startup.
+INFO: ('139.13.72.178', 55297) - "GET /docs HTTP/1.1" 200
+INFO: ('139.13.72.178', 55297) - "GET /openapi.json HTTP/1.1" 200
+INFO: ('139.13.72.178', 55302) - "GET /docs HTTP/1.1" 200
+INFO: ('139.13.72.178', 55302) - "GET /openapi.json HTTP/1.1" 200
+WARNING: Invalid HTTP request received.
+WARNING: Invalid HTTP request received.
+INFO: ('111.90.177.142', 59293) - "GET / HTTP/1.0" 200
+WARNING: Invalid HTTP request received.
+INFO: ('94.53.125.6', 38702) - "GET / HTTP/1.0" 200
+INFO: ('46.8.113.46', 57933) - "GET / HTTP/1.0" 200
+INFO: ('186.138.242.75', 46483) - "GET / HTTP/1.0" 200
+WARNING: Invalid HTTP request received.
+INFO: ('221.0.152.186', 47800) - "GET / HTTP/1.0" 200
+INFO: ('101.109.20.148', 33656) - "GET / HTTP/1.0" 200
+INFO: ('80.136.244.54', 41258) - "GET / HTTP/1.0" 200
+INFO: ('54.183.113.93', 35106) - "GET / HTTP/1.1" 200
+INFO: ('198.108.67.48', 28108) - "GET / HTTP/1.1" 200
+INFO: ('172.104.92.166', 41146) - "GET / HTTP/1.1" 200
+INFO: ('177.66.31.147', 60957) - "GET / HTTP/1.0" 200
+INFO: ('93.182.74.89', 49270) - "GET / HTTP/1.0" 200
+INFO: ('201.203.11.208', 53190) - "GET / HTTP/1.0" 200
+INFO: ('190.133.99.223', 38916) - "GET / HTTP/1.0" 200
+INFO: ('190.133.99.223', 38988) - "GET / HTTP/1.0" 200
+INFO: ('190.133.99.223', 48989) - "GET / HTTP/1.0" 200
+INFO: ('190.133.99.223', 49844) - "GET / HTTP/1.0" 200
+INFO: ('190.133.99.223', 53475) - "GET / HTTP/1.0" 200
+INFO: ('190.133.99.223', 55102) - "GET / HTTP/1.0" 200
+INFO: ('190.133.99.223', 60001) - "GET / HTTP/1.0" 200
+INFO: ('92.85.173.57', 41279) - "GET / HTTP/1.0" 200
+INFO: ('92.85.173.57', 41828) - "GET / HTTP/1.0" 200
+INFO: ('85.238.96.59', 48846) - "GET / HTTP/1.0" 200
+INFO: ('85.238.96.59', 59725) - "GET / HTTP/1.0" 200
+INFO: ('62.98.60.64', 57733) - "GET / HTTP/1.0" 200
+INFO: ('180.126.217.109', 57225) - "GET / HTTP/1.0" 200
+INFO: ('89.208.30.46', 52548) - "GET / HTTP/1.0" 200
+INFO: ('177.87.149.204', 58430) - "GET / HTTP/1.0" 200
+INFO: ('2.232.192.5', 58780) - "GET / HTTP/1.0" 200
+INFO: ('139.162.79.87', 43982) - "GET / HTTP/1.1" 200
+INFO: ('14.118.244.220', 49546) - "GET / HTTP/1.0" 200
+INFO: ('89.248.174.3', 54780) - "GET / HTTP/1.1" 200
+WARNING: Invalid HTTP request received.
+INFO: ('175.136.227.215', 35152) - "GET / HTTP/1.0" 200
+INFO: ('79.116.123.228', 46484) - "GET / HTTP/1.0" 200
+INFO: ('46.191.153.40', 56689) - "GET / HTTP/1.0" 200
+INFO: ('46.191.153.40', 37104) - "GET / HTTP/1.0" 200
+INFO: ('80.229.45.174', 47095) - "GET / HTTP/1.0" 200
+ERROR: Exception in callback UVTransport._call_connection_made
+handle: <Handle UVTransport._call_connection_made>
+Traceback (most recent call last):
+  File "uvloop/cbhandles.pyx", line 71, in uvloop.loop.Handle._run
+  File "uvloop/handles/tcp.pyx", line 152, in uvloop.loop.TCPTransport._call_connection_made
+  File "uvloop/handles/basetransport.pyx", line 131, in uvloop.loop.UVBaseTransport._call_connection_made
+  File "uvloop/handles/basetransport.pyx", line 128, in uvloop.loop.UVBaseTransport._call_connection_made
+  File "/home/harisan07/.local/lib/python3.6/site-packages/uvicorn/protocols/http/httptools_impl.py", line 125, in connection_made
+    self.client = get_remote_addr(transport)
+  File "/home/harisan07/.local/lib/python3.6/site-packages/uvicorn/protocols/utils.py", line 7, in get_remote_addr
+    info = socket_info.getpeername()
+  File "uvloop/pseudosock.pyx", line 104, in uvloop.loop.PseudoSocket.getpeername
+OSError: [Errno 107] Transport endpoint is not connected
+WARNING: Invalid HTTP request received.
+WARNING: Invalid HTTP request received.
+INFO: ('14.168.150.19', 57117) - "GET / HTTP/1.0" 200
+INFO: ('14.168.150.19', 39951) - "GET / HTTP/1.0" 200
+INFO: ('14.168.150.19', 41916) - "GET / HTTP/1.0" 200
+INFO: ('213.97.161.240', 42893) - "GET / HTTP/1.0" 200
+INFO: ('68.81.63.60', 40956) - "GET / HTTP/1.0" 200
+INFO: ('197.88.22.203', 50656) - "GET / HTTP/1.0" 200
+INFO: ('122.180.249.150', 40039) - "GET / HTTP/1.0" 200
+INFO: ('122.180.249.150', 40485) - "GET / HTTP/1.0" 200
+INFO: ('93.149.167.72', 58900) - "GET / HTTP/1.0" 200
+INFO: ('172.104.92.166', 59564) - "GET / HTTP/1.1" 200
+INFO: ('88.147.160.76', 49936) - "GET / HTTP/1.0" 200
+INFO: ('88.147.160.76', 49940) - "GET / HTTP/1.0" 200
+INFO: ('88.147.160.76', 50912) - "GET / HTTP/1.0" 200
+INFO: ('187.226.171.246', 58926) - "GET / HTTP/1.0" 200
+INFO: ('14.173.140.110', 41851) - "GET / HTTP/1.0" 200
+ERROR: Exception in callback UVTransport._call_connection_made
+handle: <Handle UVTransport._call_connection_made>
+Traceback (most recent call last):
+  File "uvloop/cbhandles.pyx", line 71, in uvloop.loop.Handle._run
+  File "uvloop/handles/tcp.pyx", line 152, in uvloop.loop.TCPTransport._call_connection_made
+  File "uvloop/handles/basetransport.pyx", line 131, in uvloop.loop.UVBaseTransport._call_connection_made
+  File "uvloop/handles/basetransport.pyx", line 128, in uvloop.loop.UVBaseTransport._call_connection_made
+  File "/home/harisan07/.local/lib/python3.6/site-packages/uvicorn/protocols/http/httptools_impl.py", line 125, in connection_made
+    self.client = get_remote_addr(transport)
+  File "/home/harisan07/.local/lib/python3.6/site-packages/uvicorn/protocols/utils.py", line 7, in get_remote_addr
+    info = socket_info.getpeername()
+  File "uvloop/pseudosock.pyx", line 104, in uvloop.loop.PseudoSocket.getpeername
+OSError: [Errno 107] Transport endpoint is not connected
+WARNING: Invalid HTTP request received.
+WARNING: Invalid HTTP request received.
+WARNING: Invalid HTTP request received.
+INFO: ('177.200.87.250', 47294) - "GET / HTTP/1.0" 200
+INFO: ('86.35.230.226', 36524) - "GET / HTTP/1.0" 200
+INFO: Shutting down
+INFO: Stopping reloader process [1876]
+INFO: Waiting for application shutdown.
+INFO: Finished server process [1878]
+INFO: Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO: Started reloader process [7163]
+email-validator not installed, email fields will be treated as str.
+To install, run: pip install email-validator
+INFO: Started server process [7165]
+INFO: Waiting for application startup.
+INFO: ('139.13.102.3', 50972) - "GET /docs HTTP/1.1" 200
+INFO: ('139.13.102.3', 50972) - "GET /openapi.json HTTP/1.1" 200
+INFO: ('193.252.180.16', 37338) - "GET / HTTP/1.0" 200
+INFO: ('172.104.92.166', 57398) - "GET / HTTP/1.1" 200
+INFO: ('213.242.18.9', 60599) - "GET / HTTP/1.0" 200
+INFO: ('213.153.152.175', 51032) - "GET / HTTP/1.0" 200
+INFO: ('213.153.152.175', 54274) - "GET / HTTP/1.0" 200
+INFO: ('213.153.152.175', 57735) - "GET / HTTP/1.0" 200
+INFO: ('90.153.107.197', 53338) - "GET /robots.txt HTTP/1.1" 404
+INFO: ('90.153.107.197', 53338) - "GET /openapi.json HTTP/1.1" 200
+INFO: ('185.231.209.27', 41761) - "GET / HTTP/1.0" 200
+INFO: ('172.105.4.63', 32018) - "GET / HTTP/1.0" 200
+WARNING: Invalid HTTP request received.
+INFO: ('172.105.4.63', 32160) - "GET /nice ports,/Trinity.txt.bak HTTP/1.0" 404
+WARNING: Invalid HTTP request received.
+WARNING: Invalid HTTP request received.
+INFO: ('172.105.4.63', 32514) - "OPTIONS / HTTP/1.0" 405
+WARNING: Invalid HTTP request received.
+WARNING: Invalid HTTP request received.
+WARNING: Invalid HTTP request received.
+WARNING: Invalid HTTP request received.
+WARNING: Invalid HTTP request received.
+WARNING: Invalid HTTP request received.
+WARNING: Invalid HTTP request received.
+WARNING: Invalid HTTP request received.
+WARNING: Invalid HTTP request received.
+WARNING: Invalid HTTP request received.
+WARNING: Invalid HTTP request received.
+WARNING: Invalid HTTP request received.
+WARNING: Invalid HTTP request received.
+WARNING: Invalid HTTP request received.
+WARNING: Invalid HTTP request received.
+WARNING: Invalid HTTP request received.
+WARNING: Invalid HTTP request received.
+WARNING: Invalid HTTP request received.
+WARNING: Invalid HTTP request received.
+WARNING: Invalid HTTP request received.
+WARNING: Invalid HTTP request received.
+WARNING: Invalid HTTP request received.
+WARNING: Invalid HTTP request received.
+INFO: ('172.105.4.63', 9008) - "GET /robots.txt HTTP/1.1" 404
+INFO: ('172.105.4.63', 9036) - "GET /nmaplowercheck1570606702 HTTP/1.1" 404
+INFO: ('172.105.4.63', 11100) - "GET /evox/about HTTP/1.1" 404
+INFO: ('198.108.67.48', 46184) - "GET / HTTP/1.1" 200
+INFO: ('139.162.79.87', 46186) - "GET / HTTP/1.1" 200
+WARNING: Invalid HTTP request received.
+INFO: ('77.247.108.119', 33648) - "GET /admin/assets/js/views/login.js HTTP/1.1" 404
+INFO: ('171.118.204.118', 59488) - "GET / HTTP/1.0" 200
+INFO: ('171.118.204.118', 59484) - "GET / HTTP/1.0" 200
+INFO: ('5.19.144.130', 59615) - "GET / HTTP/1.0" 200
+INFO: ('89.248.174.3', 45018) - "GET / HTTP/1.1" 200
+INFO: ('14.161.1.237', 38404) - "GET / HTTP/1.0" 200
+INFO: ('14.161.1.237', 39195) - "GET / HTTP/1.0" 200
+INFO: ('94.174.31.215', 45614) - "GET / HTTP/1.0" 200
+INFO: ('172.104.92.166', 36554) - "GET / HTTP/1.1" 200
+WARNING: Invalid HTTP request received.
+INFO: ('164.52.24.172', 53272) - "GET / HTTP/1.1" 200
+INFO: ('77.247.108.119', 37254) - "GET /admin/assets/js/views/login.js HTTP/1.1" 404
+INFO: ('77.247.108.119', 39118) - "GET /admin/i18n/readme.txt HTTP/1.1" 404
+INFO: ('77.247.108.119', 41730) - "GET /recordings/theme/main.css HTTP/1.1" 404
+INFO: ('77.247.108.119', 43446) - "GET /admin/config.php HTTP/1.1" 404
+INFO: ('77.247.108.119', 45000) - "GET /a2billing/admin/Public/index.php HTTP/1.1" 404
+WARNING: Detected file change in '/usr/lib/python3.6/config-3.6m-x86_64-linux-gnu/python-config.py'. Reloading...
+INFO: Shutting down
+INFO: Waiting for application shutdown.
+INFO: Finished server process [7165]
+email-validator not installed, email fields will be treated as str.
+To install, run: pip install email-validator
+INFO: Started server process [1630]
+INFO: Waiting for application startup.
+WARNING: Invalid HTTP request received.
+INFO: ('82.144.211.76', 58199) - "GET / HTTP/1.0" 200
+INFO: ('82.144.211.76', 60359) - "GET / HTTP/1.0" 200
+INFO: ('82.144.211.76', 33987) - "GET / HTTP/1.0" 200
+INFO: ('82.144.211.76', 34227) - "GET / HTTP/1.0" 200
+INFO: ('82.144.211.76', 34707) - "GET / HTTP/1.0" 200
+INFO: ('82.144.211.76', 35063) - "GET / HTTP/1.0" 200
+WARNING: Invalid HTTP request received.
+INFO: ('198.108.67.48', 43276) - "GET / HTTP/1.1" 200
+INFO: ('200.104.69.47', 59547) - "GET / HTTP/1.0" 200
+WARNING: Invalid HTTP request received.
+WARNING: Invalid HTTP request received.
+INFO: ('71.6.135.131', 43042) - "GET / HTTP/1.1" 200
+INFO: ('71.6.135.131', 43198) - "GET /favicon.ico HTTP/1.1" 404
+WARNING: Invalid HTTP request received.
+WARNING: Invalid HTTP request received.
+WARNING: Invalid HTTP request received.
+WARNING: Invalid HTTP request received.
+INFO: ('159.148.98.242', 43120) - "GET / HTTP/1.0" 200
+WARNING: Invalid HTTP request received.
+WARNING: Invalid HTTP request received.
+INFO: ('91.153.72.223', 43396) - "GET / HTTP/1.0" 200
+WARNING: Invalid HTTP request received.
+WARNING: Invalid HTTP request received.
+INFO: ('179.24.115.128', 60989) - "GET / HTTP/1.0" 200
+INFO: ('37.49.231.15', 57178) - "GET //admin/assets/js/views/login.js HTTP/1.1" 404
+INFO: ('37.49.231.15', 60342) - "GET //admin/i18n/readme.txt HTTP/1.1" 404
+INFO: ('37.49.231.15', 34960) - "GET //admin/config.php HTTP/1.1" 404
+INFO: ('37.49.231.15', 37762) - "GET //recordings/theme/main.css HTTP/1.1" 404
+INFO: ('37.49.231.15', 40530) - "GET //asterisk/recordings/theme/main.css HTTP/1.1" 404
+INFO: ('37.49.231.15', 43430) - "GET //html/recordings/theme/main.css HTTP/1.1" 404
+INFO: ('37.49.231.15', 45800) - "GET //pbx/recordings/theme/main.css HTTP/1.1" 404
+INFO: ('37.49.231.15', 48626) - "GET //recordings/theme/main.css HTTP/1.1" 404
+INFO: ('37.49.231.15', 60882) - "GET //freepbx/recordings/theme/main.css HTTP/1.1" 404
+INFO: ('213.7.221.26', 42600) - "GET / HTTP/1.0" 200
+INFO: ('180.181.196.104', 55642) - "GET / HTTP/1.0" 200
+INFO: ('172.104.92.166', 44286) - "GET / HTTP/1.1" 200
+WARNING: Invalid HTTP request received.
+WARNING: Invalid HTTP request received.
+INFO: ('191.52.246.11', 60900) - "GET / HTTP/1.0" 200
+INFO: ('191.52.246.11', 32769) - "GET / HTTP/1.0" 200
+WARNING: Invalid HTTP request received.
+WARNING: Invalid HTTP request received.
+INFO: Shutting down
+INFO: Waiting for application shutdown.
+INFO: Finished server process [1630]
+INFO: Stopping reloader process [7163]

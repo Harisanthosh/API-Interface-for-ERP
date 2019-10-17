@@ -153,7 +153,7 @@ PyYAML==3.13
 pyzmq==17.1.2
 qtconsole==4.4.1
 recommonmark==0.5.0
-requests==2.19.1
+requests==2.20.0
 requests-futures==0.9.7
 requestsexceptions==1.4.0
 rfc3986==1.1.0

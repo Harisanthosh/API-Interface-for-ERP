@@ -3,7 +3,7 @@
 import csv
 import os
 from datetime import datetime
-txt_file = "/home/harisan07/ERP/TransfactAPP/sir_output.tab"
+txt_file = "D:\HariMasters\SIMPROD\GenericSimulationproject\ERP\TransfactAPP\sir_output.tab"
 csv_file = os.path.splitext(txt_file)[0] + ".csv"
 
 def convert():

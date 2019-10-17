@@ -32,8 +32,42 @@
 
           <div class="body" role="main">
             
-  <div class="section" id="api-fetcher-module">
-<h1>api_fetcher module<a class="headerlink" href="#api-fetcher-module" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="module-api_fetcher">
+<span id="api-fetcher-module"></span><h1>api_fetcher module<a class="headerlink" href="#module-api_fetcher" title="Permalink to this headline">¶</a></h1>
+<p>Program to load the entries from Oracle DB and display it in GUI</p>
+<dl class="function">
+<dt id="api_fetcher.get_latest_simulation_result">
+<code class="sig-prename descclassname">api_fetcher.</code><code class="sig-name descname">get_latest_simulation_result</code><span class="sig-paren">(</span><em class="sig-param">table: str</em><span class="sig-paren">)</span><a class="headerlink" href="#api_fetcher.get_latest_simulation_result" title="Permalink to this definition">¶</a></dt>
+<dd><p>Search for the latest simulation record in the table and returns it to the User</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="api_fetcher.query">
+<code class="sig-prename descclassname">api_fetcher.</code><code class="sig-name descname">query</code><span class="sig-paren">(</span><em class="sig-param">table: str</em>, <em class="sig-param">filter_time: str = None</em><span class="sig-paren">)</span><a class="headerlink" href="#api_fetcher.query" title="Permalink to this definition">¶</a></dt>
+<dd><p>Queries and returns the value of the records of the simulation from the database.
+[Note]: If timestamp is not included it fetches all the records from the table</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="api_fetcher.read_root">
+<code class="sig-prename descclassname">api_fetcher.</code><code class="sig-name descname">read_root</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#api_fetcher.read_root" title="Permalink to this definition">¶</a></dt>
+<dd><p>Random test function xD</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="api_fetcher.remove_table">
+<code class="sig-prename descclassname">api_fetcher.</code><code class="sig-name descname">remove_table</code><span class="sig-paren">(</span><em class="sig-param">table: str</em><span class="sig-paren">)</span><a class="headerlink" href="#api_fetcher.remove_table" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete the table which was created in the ERP system with the name of the .tab file</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="api_fetcher.upload_result">
+<em class="property">async </em><code class="sig-prename descclassname">api_fetcher.</code><code class="sig-name descname">upload_result</code><span class="sig-paren">(</span><em class="sig-param">fileb: fastapi.datastructures.UploadFile = Schema(default: Ellipsis</em>, <em class="sig-param">extra: {})</em><span class="sig-paren">)</span><a class="headerlink" href="#api_fetcher.upload_result" title="Permalink to this definition">¶</a></dt>
+<dd><p>Upload a file with the extension of .tab which will be converted to a .csv file
+and used for insertion to the Oracle Database of the Transfact System
+[Note]: A new table will be created with the filename of the uploaded .tab file</p>
+</dd></dl>
+
 </div>
 
 

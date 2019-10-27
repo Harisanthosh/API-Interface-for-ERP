@@ -5,6 +5,8 @@ from fastapi import FastAPI, File, Form, UploadFile
 import csv, ast
 from sshtunnel import SSHTunnelForwarder, open_tunnel
 #import paramiko
+#from flask import send_file
+from starlette.responses import FileResponse
 import cx_Oracle
 import pandas as pd
 import sys
@@ -29,6 +31,7 @@ database='grerp'
 
 # port=server.local_bind_port,
 UPLOAD_FOLDER = 'D:/HariMasters/SIMPROD/uploads'
+EXCEL_PATH = 'D:/HariMasters/SIMPROD/GenericSimulationproject/ERP/TransfactAPP/'
 
 @app.post("/files/")
 async def upload_result(
@@ -167,5 +170,48 @@ def query(table: str,filter_time: str = None):
         return res
         # for row in c:
         #     print(row)
+
+@app.get("/download/{table}")
+def download_table_as_excel(table: str, filter_time: str = None):
+    """
+    Downloads the entire data from the database as an excel file
+    [Note]: If timestamp is not included it fetches all the records from the table
+    """
+    if filter_time == None:
+        q = "select * from " + table + " ";
+    else:
+        q = "select * from " + table + " where Timestamp = '" + filter_time + "'";
+
+    with SSHTunnelForwarder(
+            (host, 24226),
+            ssh_username=ssh_username,
+            ssh_pkey=ssh_private_key,
+            remote_bind_address=(localhost, 1521),
+            local_bind_address=(localhost, 1563)
+    ) as server:
+        dsn_tns = cx_Oracle.makedsn(localhost, 1563,
+                                    service_name=database)
+        conn = cx_Oracle.connect(user=user, password=password,
+                                 dsn=dsn_tns)
+
+        c = conn.cursor()
+        print(q)
+        try:
+            # c.execute(q)
+            # res = c.fetchall()
+            # c.close()
+            data = pd.read_sql(q, conn)
+            print(data.head())
+            data.to_excel(table+'.xlsx')
+            conn.close()
+        except:
+            data = pd.read_sql(q, conn)
+            print(data.head())
+            data.to_excel(table + '.xlsx')
+            conn.close()
+        #return data.to_excel(table + '.xlsx')
+        return FileResponse(EXCEL_PATH+table+'.xlsx',media_type='application/octet-stream')
+        #return send_file(EXCEL_PATH+table+'.xlsx', as_attachment=True)
+
 
 
